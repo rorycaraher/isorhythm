@@ -1,5 +1,5 @@
 # Isorhythm
-A Max for Live sequencer for creating isorhythm in Ableton Live.
+Pure Data and Max For Live implementations of isorhythm sequencing.
 
 [Isorhythm on Wikipedia](https://en.wikipedia.org/wiki/Isorhythm)
 
