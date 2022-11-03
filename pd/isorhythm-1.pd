@@ -44,24 +44,24 @@
 #X obj 466 193 sel 0 1 2 3 4 5 6 7;
 #X obj 466 133 % 5;
 #X obj 467 13 r rhythmout;
-#X obj 19 10 loadbang;
-#X obj 19 42 s resetseq;
+#X obj 19 60 loadbang;
+#X obj 19 92 s resetseq;
 #X obj 290 464 r resetseq;
 #X msg 290 492 0;
 #X obj 484 39 r resetseq;
 #X msg 484 70 0;
 #X floatatom 466 515 5 0 0 0 - - - 0;
-#X obj 18 330 mtof;
+#X obj 18 400 mtof;
 #X obj 466 544 s pitchout;
-#X obj 18 265 r pitchout;
-#X obj 18 417 *~;
-#X obj 173 286 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#X obj 18 335 r pitchout;
+#X obj 18 487 *~;
+#X obj 173 356 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
 #000000 #000000 0 1;
-#X obj 18 481 dac~;
-#X text 153 130 Tempo (bpm);
-#X obj 120 103 loadbang;
-#X msg 120 131 131;
-#X obj 18 135 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 18 551 dac~;
+#X text 153 200 Tempo (bpm);
+#X obj 120 173 loadbang;
+#X msg 120 201 131;
+#X obj 18 205 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #N canvas 63 88 541 544 clockdivider 0;
 #X obj 65 126 metro;
@@ -137,12 +137,12 @@
 #X connect 30 0 0 1;
 #X connect 31 0 32 0;
 #X connect 32 0 1 1;
-#X restore 18 159 pd clockdivider;
-#X obj 99 196 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X restore 18 229 pd clockdivider;
+#X obj 99 266 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
-#X obj 119 196 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#X obj 119 266 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X obj 79 196 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 79 266 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
 #X obj 272 700 spigot;
 #X obj 332 700 spigot;
@@ -153,13 +153,13 @@
 #X obj 632 700 spigot;
 #X obj 692 699 spigot;
 #X obj 273 752 bang;
-#X obj 18 451 *~;
-#X obj 66 360 r rhythmout;
-#X obj 58 416 vline~;
-#X msg 62 386 1 \, 0 200;
-#X obj 18 356 phasor~;
-#X obj 18 387 lop~;
-#X obj 89 14 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 18 521 *~;
+#X obj 66 430 r rhythmout;
+#X obj 58 486 vline~;
+#X msg 62 456 1 \, 0 200;
+#X obj 18 426 phasor~;
+#X obj 18 457 lop~;
+#X obj 89 64 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
 #X obj 935 103 f 0;
 #X obj 972 103 + 1;
@@ -171,19 +171,19 @@
 #X floatatom 934 569 5 0 0 0 - - - 0;
 #X obj 934 598 s filtout;
 #X obj 935 134 % 3;
-#X obj 57 298 r filtout;
+#X obj 57 368 r filtout;
 #X obj 272 559 % 8;
-#X obj 38 196 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 38 266 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
-#X obj 58 196 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 58 266 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
-#X obj 18 196 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 18 266 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
-#X obj 38 222 s clock;
+#X obj 38 292 s clock;
 #X obj 272 434 r clock;
-#X obj 18 83 key;
-#X obj 18 108 sel 32;
-#X obj 18 298 + 36;
+#X obj 18 153 key;
+#X obj 18 178 sel 32;
+#X obj 18 368 + 36;
 #X obj 484 226 vradio 15 1 0 12 empty empty empty 0 -8 0 10 #fcfcfc
 #000000 #000000 0;
 #X obj 484 411 * -1;
@@ -250,6 +250,8 @@
 #X obj 1214 514 f;
 #X obj 1232 238 vsl 15 256 0 7000 0 0 empty empty empty 0 -9 0 10 #fcfcfc
 #000000 #000000 0 1;
+#X obj 89 14 key;
+#X obj 89 38 sel 114;
 #X connect 0 0 49 1;
 #X connect 1 0 50 1;
 #X connect 2 0 51 1;
@@ -348,7 +350,7 @@
 #X connect 75 0 63 1;
 #X connect 76 0 6 0;
 #X connect 76 0 11 0;
-#X connect 77 0 80 0;
+#X connect 79 0 80 0;
 #X connect 81 0 4 0;
 #X connect 82 0 83 0;
 #X connect 83 0 44 0;
@@ -401,3 +403,5 @@
 #X connect 131 0 130 1;
 #X connect 132 0 72 0;
 #X connect 133 0 132 1;
+#X connect 134 0 135 0;
+#X connect 135 0 64 0;
